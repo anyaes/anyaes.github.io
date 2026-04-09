@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Metal&family=Inter:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Metal"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['"DM Mono"', 'monospace']
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite'
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {
+                                transform: 'translateX(0%)'
+                            },
+                            '100%': {
+                                transform: 'translateX(-50%)'
+                            }
+                        },
+                        float: {
+                            '0%, 100%': {
+                                transform: 'translateY(0px) rotate(0deg)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-20px) rotate(5deg)'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</head>
+
+<body
+    class="bg-zinc-900 min-h-screen p-4 md:p-8 pt-44 font-sans text-black dark:text-white transition-colors duration-300">
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+
+        <div
+            class="absolute -top-20 -left-20 h-96 w-96 border-2 border-blue-500/20 rounded-full animate-[spin_60s_linear_infinite] shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+            <div class="absolute top-1/2 left-0 w-full h-px bg-blue-500/10"></div>
+            <div class="absolute top-0 left-1/2 w-px h-full bg-blue-500/10"></div>
+        </div>
+
+        <div class="absolute top-1/3 -right-20 h-80 w-80 animate-float">
+            <div
+                class="absolute inset-0 rounded-full border-2 border-purple-500/30 shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+            </div>
+
+            <div class="absolute inset-10 rounded-full bg-purple-900/10 backdrop-blur-sm border border-purple-500/20">
+            </div>
+
+            <div
+                class="absolute inset-20 rounded-full border-2 border-dashed border-purple-500/20 animate-[spin_20s_linear_infinite]">
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-1/4 left-12 h-32 w-32 bg-yellow-400/30 -rotate-12 border border-yellow-400/20 shadow-[10px_10px_0px_0px_rgba(250,204,21,0.1)]">
+        </div>
+
+        <div class="absolute top-1/2 left-0 w-full h-px bg-yellow-400/10 shadow-[0_0_10px_rgba(250,204,21,0.2)]"></div>
+
+        <div class="absolute top-[15%] right-[20%] w-8 h-px bg-pink-500/40 rotate-45"></div>
+        <div class="absolute top-[15%] right-[20%] w-8 h-px bg-pink-500/40 -rotate-45"></div>
+
+        <div
+            class="absolute bottom-10 right-10 flex flex-col gap-1 p-4 border-l-2 border-orange-500/30 bg-orange-950/5">
+            <div class="h-1 w-32 bg-orange-500/20 shadow-[0_0_8px_rgba(249,115,22,0.1)]"></div>
+            <div class="h-1 w-24 bg-orange-500/10"></div>
+            <div class="font-mono text-[9px] text-orange-500/40 mt-2 font-bold uppercase tracking-widest">
+                System: Stable_UI
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-10 h-32 w-32 pointer-events-none opacity-30 group">
+
+
+
+            <div
+                class="absolute inset-0 flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">
+                <div class="w-full h-full border-2 border-blue-400/50 drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]"
+                    style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);">
+                </div>
+            </div>
+
+            <div
+                class="absolute inset-4 flex items-center justify-center rotate-45 group-hover:rotate-0 transition-transform duration-700">
+                <div class="w-full h-full bg-purple-600/10 border border-purple-400/30"
+                    style="clip-path: polygon(50% 100%, 0% 0%, 100% 0%);">
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <header class="fixed top-0 left-0 w-full z-50">
+
+        <div class="w-full bg-yellow-400 border-b-2 border-black overflow-hidden py-1">
+            <div class="flex items-center whitespace-nowrap animate-marquee">
+
+                <div class="flex items-center">
+                    <span class="font-mono italic font-bold text-lg text-black mx-4 tracking-normal">
+                        Currently obssessed with Y2K aesthetics, vintage designs, and photography.
+                    </span>
+                    <div
+                        class="w-4 h-4 bg-[conic-gradient(#000_90deg,#0000_90deg_180deg,#000_180deg_270deg,#0000_270deg)] bg-[length:8px_8px] mx-4">
+                    </div>
+                    <span class="font-mono italic font-extrabold text-lg text-black mx-4 uppercase tracking-widest">
+                        PORTFOLIO
+                    </span>
+                    <div
+                        class="w-4 h-4 bg-[conic-gradient(#000_90deg,#0000_90deg_180deg,#000_180deg_270deg,#0000_270deg)] bg-[length:8px_8px] mx-4">
+                    </div>
+                    <span class="font-mono italic font-bold text-lg text-black mx-4  tracking-normal">
+                        Hi, I'm Anya, and welcome to my portfolio! Take the time to look around and get to know me!
+                    </span>
+                    <div
+                        class="w-4 h-4 bg-[conic-gradient(#000_90deg,#0000_90deg_180deg,#000_180deg_270deg,#0000_270deg)] bg-[length:8px_8px] mx-4">
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <span class="font-mono italic font-bold text-lg text-black mx-4 tracking-normal">
+                        I dabble in just about anything, so who knows? Take a look around!
+                    </span>
+                    <div
+                        class="w-4 h-4 bg-[conic-gradient(#000_90deg,#0000_90deg_180deg,#000_180deg_270deg,#0000_270deg)] bg-[length:8px_8px] mx-4">
+                    </div>
+                    <span class="font-mono italic font-extrabold text-lg text-black mx-4 uppercase tracking-widest">
+                        PORTFOLIO
+                    </span>
+                    <div
+                        class="w-4 h-4 bg-[conic-gradient(#000_90deg,#0000_90deg_180deg,#000_180deg_270deg,#0000_270deg)] bg-[length:8px_8px] mx-4">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <nav
+            class="flex items-center justify-between h-14 w-full px-8 bg-orange-600/50 backdrop-blur-md border-b-4 border-black text-white">
+            <div class="font-display italic font- text-4xl tracking-tighter">ae</div>
+
+            <div class="flex gap-8 font-mono font-extrabold uppercase text-l tracking-widest">
+                <a href="#" class="hover:text-yellow-400 transition-colors">About</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Catalog</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Misc</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">More</a>
+            </div>
+
+            <div class="flex gap-2">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+                <div class="w-3 h-3 bg-white/30 rounded-full"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto flex flex-col gap-12 pb-20 mt-24">
+
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-6">
+            <div
+                class="bg-yellow-400 rounded-[2.5rem] p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-black">
+                <div
+                    class="bg-zinc-300 rounded-2xl border-4 border-black mb-4 aspect-square flex items-center justify-center overflow-hidden">
+                    <img src="self.jpg" alt="Anya Espejo" class="w-full h-full object-cover">
+                </div>
+
+                <h1 class="text-4xl font-bold font-mono">Anya Espejo</h1>
+                <p class="font-bold text-sm mt-2 opacity-70 italic tracking-tighter">
+                    dawg i dont even know what i do atp
+                </p>
+            </div>
+
+            <div
+                class="bg-white dark:bg-zinc-900/80 backdrop-blur-md rounded-[2.5rem] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 class="text-2xl font-mono font-black mb-4 border-b-2 border-black dark:border-white inline-block">
+                    About Me</h2>
+                <p class="text-base leading-relaxed">
+                    I'm a designer and developer from the Philippines.
+                    I focus primarily on graphic design and UI/UX design, but I also have experience in other areas such
+                    as photography and video editing.
+                </p>
+                <h2
+                    class="text-2xl font-mono font-black mt-8 mb-4 border-b-2 border-black dark:border-white inline-block">
+                    Software</h2>
+                <div class="flex flex-wrap gap-3">
+
+
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-blue-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/photoshop/white" class="w-4 h-4" alt="PS">
+                        Photoshop
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/figma/white" class="w-4 h-4" alt="FIG">
+                        Figma
+                    </div>
+
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-orange-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/adobeillustrator/white" class="w-4 h-4" alt="AI">
+                        Illustrator
+                    </div>
+
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/adobepremierepro/white" class="w-4 h-4" alt="PR">
+                        Premiere
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/adobepremierepro/white" class="w-4 h-4" alt="PR">
+                        After Effects
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/davinciresolve/white" class="w-4 h-4" alt="PR">
+                        DaVinci Resolve
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/adobepremierepro/white" class="w-4 h-4" alt="PR">
+                        Lightroom
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/adobepremierepro/white" class="w-4 h-4" alt="PR">
+                        Canva
+                    </div>
+                    <div
+                        class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-xs font-black uppercase tracking-widest   hover:bg-zinc-800 transition-colors cursor-default">
+                        <img src="https://cdn.simpleicons.org/blender/white" class="w-4 h-4" alt="PR">
+                        Blender
+                    </div>
+
+                </div>
+                <h2
+                    class="text-2xl font-mono font-black mt-8 mb-4 border-b-2 border-black dark:border-white inline-block">
+                    Contact</h2>
+            </div>
+        </div>
+        <h2
+            class="text-4xl font-mono font-black  uppercase bg-orange-300 dark:bg-zinc-800 border-4 border-black px-6 py-2 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Selected Projects</h2>
+
+        <section class="space-y-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="group bg-purple-500/80 backdrop-blur-md rounded-[2rem] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden transition-all hover:-translate-y-2">
+                    <div class="h-48 bg-zinc-200 border-b-4 border-black"></div>
+                    <div class="p-6">
+                        <h3 class="font-mono italic text-2xl text-white font-black">Computer Studies "Break the Loop"
+                            Branding</h3>
+                        <p class="text-white/80 mt-2">3D rendering and graphic design for the "Break the Loop" branding.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="group bg-yellow-400 rounded-[2rem] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden transition-all hover:-translate-y-2">
+                    <div class="h-48 bg-zinc-800 border-b-4 border-black"></div>
+                    <div class="p-6">
+                        <h3 class="font-mono italic text-2xl text-black font-black">Digital Catalog</h3>
+                        <p class="text-black/80 font-bold mt-2">A high-performance e-commerce concept.</p>
+                    </div>
+                </div>
+                <div
+                    class="group bg-green-400 rounded-[2rem] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden transition-all hover:-translate-y-2">
+                    <div class="h-48 bg-zinc-800 border-b-4 border-black"></div>
+                    <div class="p-6">
+                        <h3 class="font-mono italic text-2xl text-black font-black">Unyon Mindanao "Into the Grassroots"
+                            Branding</h3>
+                        <p class="text-black/80 font-bold mt-2">A high-performance e-commerce concept.</p>
+                    </div>
+                </div>
+                <div
+                    class="group bg-orange-200 rounded-[2rem] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden transition-all hover:-translate-y-2">
+                    <div class="h-48 bg-zinc-800 border-b-4 border-black"></div>
+                    <div class="p-6">
+                        <h3 class="font-mono italic text-2xl text-black font-black">Cateneo Website</h3>
+                        <p class="text-black/80 font-bold mt-2">UI/UX design for the home page, hero section, and meet the devs sections of the Cateneo website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2
+            class="text-4xl font-mono font-black italic uppercase bg-white dark:bg-zinc-800 border-4 border-black px-6 py-2 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Relevant Experiences</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+                class="bg-zinc-100/90 dark:bg-zinc-800/90 backdrop-blur-md rounded-[2.5rem] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 class="text-3xl font-mono italic font-black mb-6 uppercase">Work Experience</h2>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-black text-xl">Freelance Creative Work</h4>
+                        <p class="text-sm opacity-70">2023 - Present</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-zinc-100/90 dark:bg-zinc-800/90 backdrop-blur-md rounded-[2.5rem] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <h2 class="text-3xl font-mono italic font-black mb-6 uppercase">Volunteerism</h2>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-orange-500 pl-4">
+                        <h4 class="font-black text-xl">Creative Designer</h4>
+                        <p class="text-sm opacity-70">DurianPy Davao Python User Group • 2025 - Present</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-400 pl-4">
+                        <h4 class="font-black text-xl">UI/UX Designer</h4>
+                        <p class="text-sm opacity-70">DurianPy Davao Python User Group • 2025 - 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2
+            class="text-4xl font-mono font-black italic uppercase bg-white dark:bg-zinc-800 border-4 border-black px-6 py-2 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Relevant Education & Affiliations</h2>
+
+        <div
+            class="bg-zinc-100/90 dark:bg-zinc-800/90 backdrop-blur-md rounded-[2.5rem] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <h2 class="text-3xl font-mono italic font-black mb-6 uppercase">Education</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h4 class="font-black text-xl">Bachelor of Science in Information Technology</h4>
+                    <p class="text-base opacity-70">Ateneo de Davao University • Batch 2028</p>
+                    <div class="text-sm mt-2">I am currently taking up the <strong>cybersecurity</strong> major,
+                        learning about <strong>networking, cybersecurity, and cloud computing</strong>. I am also taking
+                        up the <strong>business analytics</strong> minor, learning about <strong>data analytics,
+                            business intelligence, and data visualization</strong> on the side, concurrent with my
+                        studies.</div>
+                </div>
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h4 class="font-black text-xl">Davao Christian High School</h4>
+                    <p class="text-base opacity-70">Accountancy & Business Management (ABM) Track • Preschool – 2024</p>
+                    <div class="text-sm mt-2">I learned <strong>layouting, design concepts, writing and presentation,
+                            and journalism skills</strong> through extracurriculars.
+                        I worked as a <strong> writer, associate editor, graphic designer, photojournalist, and media
+                            editor</strong> for the school newspaper. And later on, worked for school yearbook as the
+                        <strong>layout editor</strong>.</div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-zinc-950 rounded-3xl border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] overflow-hidden font-mono mt-8">
+            <div class="bg-zinc-800 p-3 border-b-2 border-black flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-[10px] text-zinc-400 ml-2 uppercase tracking-tighter">anya_contact.exe</span>
+            </div>
+            <div class="p-8 text-blue-400 space-y-4">
+                <p><span class="text-green-500">guest@portfolio:~$</span> sudo send-message</p>
+                <div class="space-y-4">
+                    <input type="text" placeholder="YOUR_NAME"
+                        class="bg-transparent border-b border-blue-500/30 w-full outline-none p-2 placeholder:text-blue-900 focus:border-blue-400 transition-all">
+                    <textarea placeholder="YOUR_MESSAGE"
+                        class="bg-transparent border-b border-blue-500/30 w-full outline-none p-2 placeholder:text-blue-900 focus:border-blue-400 transition-all h-24"></textarea>
+                    <button
+                        class="bg-blue-600 text-black font-black px-6 py-2 rounded-lg hover:bg-blue-400 transition-all uppercase italic">Execute_Send();</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
