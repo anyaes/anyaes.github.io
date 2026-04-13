@@ -39,6 +39,17 @@
                             '50%': {
                                 transform: 'translateY(-20px) rotate(5deg)'
                             },
+
+                        },
+                        reveal: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(40px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
                         }
                     }
                 }
@@ -191,7 +202,8 @@
                 <p class="font-bold text-sm mt-2 opacity-70 tracking-tighter">
                     UI/UX Designer & Graphic Designer
                 </p>
-                <div class="mt-4 bg-white dark:bg-zinc-900/80 backdrop-blur-md rounded-[1.5rem] p-4 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div
+                    class="mt-4 bg-white dark:bg-zinc-900/80 backdrop-blur-md rounded-[1.5rem] p-4 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <div class="font-mono font-bold">Now Playing: aespa - Whiplash</div>
                 </div>
             </div>
@@ -349,7 +361,8 @@
             class="text-4xl font-mono font-black  bg-orange-300 dark:bg-zinc-800 border-4 border-black px-6 py-2 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             Selected Projects</h2>
 
-        <section class="space-y-6">
+        <section
+            class="[view-timeline-name:--reveal] [animation-name:reveal] [animation-fill-mode:both] [animation-timeline:--reveal] [animation-range:entry_10%_contain_40%] space-y-6">
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div
@@ -363,7 +376,7 @@
                                 href="https://www.facebook.com/share/p/18F5mpJf71/" target="_blank">Computer Studies
                                 <em>"Break the Loop"</em></a>
                             Branding</h3>
-                        <p class="text-white mt-2">3D rendering and graphic design for the "Break the Loop" branding.
+                        <p class="text-white/80 mt-2">3D rendering and graphic design for the "Break the Loop" branding.
                         </p>
                     </div>
                 </div>
@@ -378,7 +391,7 @@
                                 href="https://www.facebook.com/share/p/1ChV39ra27/" target="_blank">Unyon Mindanao
                                 <em>Into the Grassroots</em>
                                 Branding</h3></a>
-                        <p class="text-white mt-2">Created branding assets and was in-charge of the branding photoshoot as photographer.</p>
+                        <p class="text-white font-bold mt-2">A high-performance e-commerce concept.</p>
                     </div>
                 </div>
                 <div
@@ -391,8 +404,8 @@
                         <h3 class="font-mono text-2xl text-yellow-500 font-black"><a
                                 href="https://www.facebook.com/share/p/1GpDg3Tgo7/" target="_blank"> PIGLASAPAT <em>Next
                                     Step Forward</em> Slate Branding</h3></a>
-                        <p class="text-white mt-2">Branding for the PIGLASAPAT "Next Step Forward" slate for
-                            the 2026 SAMAHAN elections.</p>
+                        <p class="text-white font-bold mt-2">Branding for the PIGLASAPAT "Next Step Forward" slate for
+                            the 2026 SAMAHAN elections .</p>
                     </div>
                 </div>
             </div>
@@ -483,6 +496,33 @@
                     <div class="border-l-4 border-green-300 dark:border-white pl-4">
                         <h4 class="font-black text-l">Unyon Mindanao</h4>
                         <p class="text-base opacity-70">Mindanao Chief Associate for Graphics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2
+            class="text-4xl font-mono font-black bg-sky-200 dark:bg-zinc-800 border-4 border-black px-6 py-2 inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Research</h2>
+
+        <div
+            class="bg-zinc-100/90 dark:bg-zinc-800/90 backdrop-blur-md rounded-[2.5rem] p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <h2 class="text-3xl font-mono  font-black mb-6 ">Academic Projects</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h4 class="font-black text-xl">Designing an AR-based Completion and Productivity Tool for
+                        Neurodivergent Individuals</h4>
+                    <p class="text-base opacity-70">Espejo, Wacan, Montes, Kalim | Ateneo de Davao University • 2025</p>
+                    <div class="text-sm mt-2">This study aimed evaluate the effectiveness of using AR technologies in
+                        enhancing the QoL of neurodivergent individuals and their caregivers. This study was done in the
+                        context of a research project for our Introduction to Human Computer Interaction class.</div>
+                </div>
+                <div class="border-l-4 border-black dark:border-white pl-4">
+                    <h4 class="font-black text-xl">A Study on the Correlation Between Age and the Food Spending Habits
+                        of Individuals with Purchasing Power in Davao Christian High School</h4>
+                    <p class="text-base opacity-70">Blas, Espejo, Namoco, Ong, Puzon | Ateneo de Davao University • 2025</p>
+                    <div class="text-sm mt-2">The general objective of this research study was to determine how one’s
+                        age may affect their food spending habits. This study was done in partial fulfillment
+                        for the subject Inquiries, Investigations and Immersion.
                     </div>
                 </div>
             </div>
